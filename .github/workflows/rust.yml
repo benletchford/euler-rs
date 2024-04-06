@@ -19,4 +19,4 @@ jobs:
       - name: Run tests
         run: cargo test --verbose
       - name: Check README
-        run: cargo rdme --check
+        run: cargo install cargo-rdme && cargo rdme --check
