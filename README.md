@@ -11,6 +11,7 @@ $ cargo test
 ## Update README.md
 
 ```sh
+$ cargo install cargo-rdme
 $ cargo rdme --force
 ```
 
