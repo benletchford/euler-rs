@@ -46,6 +46,19 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 assert_eq!(euler_rs::problem2::answer(), 4613732)
 ```
 
+##### Problem 3. Largest Prime Factor
+
+The prime factors of 13195 are 5, 7, 13 and 29.
+What is the largest prime factor of the number 600851475143?
+
+[problem3.rs](src/problem3.rs)
+
+###### Answer
+
+```rust
+assert_eq!(euler_rs::problem3::answer(), 6857)
+```
+
 <!-- cargo-rdme end -->
 
 License: MIT
