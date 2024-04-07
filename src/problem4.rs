@@ -8,11 +8,18 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 use crate::math;
 
 pub fn answer() -> u64 {
-    for i in (1..9).rev() {
-        for j in (1..9).rev() {
-            println!("{} {}", i, j);
+    let mut largest_product = 0;
+
+    for i in (1..1000).rev() {
+        for j in (1..1000).rev() {
+            let product = i * j;
+            if product > largest_product && math::is_palindromic(product) {
+                largest_product = product;
+            }
         }
     }
+
+    largest_product
 }
 
 #[cfg(test)]
@@ -21,6 +28,6 @@ mod tests {
 
     #[test]
     fn test_answer() {
-        answer();
+        assert_eq!(answer(), 906609);
     }
 }

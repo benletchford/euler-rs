@@ -12,6 +12,12 @@ pub fn is_prime(n: u64) -> bool {
     true
 }
 
+pub fn is_palindromic(n: u64) -> bool {
+    let n_str = n.to_string();
+
+    n_str == n_str.chars().rev().collect::<String>()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -32,5 +38,14 @@ mod tests {
         assert_eq!(is_prime(11), true);
         assert_eq!(is_prime(12), false);
         assert_eq!(is_prime(13), true);
+    }
+
+    #[test]
+    fn test_is_palindromic() {
+        assert_eq!(is_palindromic(1), true);
+        assert_eq!(is_palindromic(2345), false);
+        assert_eq!(is_palindromic(90909), true);
+        assert_eq!(is_palindromic(90908), false);
+        assert_eq!(is_palindromic(123454321), true);
     }
 }
